@@ -50,7 +50,8 @@ const GalleryPage = () => {
     setActiveIndex((prev) => (prev < cards.length - 1 ? prev + 1 : 0));
   };
 
-  const calculateCardPosition = (index) => {
+  // Calculate the position of a card based on its index relative to the active card
+  const calculateCardPosition = (index: number) => {
     const totalCards = cards.length;
     const relativeIndex = index - activeIndex;
     
@@ -143,7 +144,7 @@ const GalleryPage = () => {
             {activeCard?.content || ''}
           </p>
           <div className="mt-8 flex items-center gap-2">
-            {cards.map((_, idx) => (
+            {cards.map((_, idx: number) => (
               <button
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
@@ -184,7 +185,7 @@ const GalleryPage = () => {
       
       {/* Cards container */}
       <div className="absolute inset-0 pointer-events-none">
-        {cards.map((card, index) => {
+        {cards.map((card, index: number) => {
           const { x, y, scale, opacity, zIndex, rotation } = calculateCardPosition(index);
           const isActive = index === activeIndex;
           
