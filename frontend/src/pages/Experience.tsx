@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import type { ReactNode } from 'react';
+
+interface Card {
+  id: string;
+  title: string;
+  logo?: ReactNode | null;
+  bgImage?: string | null;
+}
 
 const InteractiveCards = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
-  const cards = [
+  const cards: Card[] = [
     {
       id: '01',
       logo: (
@@ -56,7 +64,7 @@ const InteractiveCards = () => {
       <div className="absolute w-[10%] md:w-[70%] lg:w-[75%] max-w-[770px] md:max-w-[1100px] h-[48%] md:h-[65%] lg:h-[70%] max-h-[350px] md:max-h-[500px] bg-transparent border-[2px] md:border-[3px] border-[#1e3a5c] pointer-events-none z-0" />
       
       <div className="relative flex gap-2 md:gap-4 lg:gap-6 justify-center z-10 w-full max-w-[840px] md:max-w-[1200px]">
-        {cards.map((card, index) => (
+        {cards.map((card, index: number) => (
           <div
             key={card.id}
             className="relative flex items-start flex-1 max-w-[154px] md:max-w-[250px] lg:max-w-[220px] xl:max-w-[280px]"

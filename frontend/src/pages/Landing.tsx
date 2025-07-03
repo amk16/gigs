@@ -1,25 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
-interface MousePosition {
-  x: number;
-  y: number;
-}
-
-const Landing: React.FC = () => {
-  const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent): void => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
+const Landing = () => {
   return (
     <div className="h-full text-white overflow-hidden relative" style={{
       background: "linear-gradient(to bottom, #1e3a5c 0%, #050a2a 100%)"

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ArtUnboundOdyssey = () => {
   return (
     <div className="relative min-h-screen bg-[#050a2a] flex items-center justify-center md:justify-end p-8 md:pr-20 lg:pl-34">

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Mail, User, Phone, MessageSquare, ChevronDown, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import type { ChangeEvent, FC } from 'react';
+import { Mail, User, ChevronDown, ArrowRight } from 'lucide-react';
 
 interface FormData {
   fullName: string;
@@ -9,7 +10,7 @@ interface FormData {
   agreedToPrivacy: boolean;
 }
 
-const ContactPage: React.FC = () => {
+const ContactPage: FC = () => {
   const [formData, setFormData] = useState<FormData>({
     fullName: '',
     email: '',
@@ -20,7 +21,7 @@ const ContactPage: React.FC = () => {
 
   const [showPhoneInput, setShowPhoneInput] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
     if (type === 'checkbox') {
       const target = e.target as HTMLInputElement;
