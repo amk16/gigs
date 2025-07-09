@@ -40,7 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage }) => {
         </div>
 
         {/* Logo */}
-        <div className="absolute left-1/2 top-10 transform -translate-x-1/2">
+        <div className="absolute left-1/2 top-5 transform -translate-x-1/2">
           <div className="text-5xl font-thin text-[#b8860b]">
             <span className="inline-block">G</span>
             <span className="inline-block ml-1">S</span>
