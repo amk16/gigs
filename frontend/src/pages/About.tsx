@@ -18,11 +18,11 @@ const ArtUnboundOdyssey = () => {
             {/* Frame container */}
             
                 {/* Artwork container */}
-                <div className="w-[160px] h-[220px] sm:w-[200px] sm:h-[260px] md:w-[220px] md:h-[300px] lg:w-[280px] lg:h-[380px] xl:w-[450px] xl:h-[580px] bg-gradient-to-br from-slate-800 to-slate-900 rounded flex items-center justify-center relative overflow-hidden">
+                <div className="w-[160px] h-[220px] sm:w-[200px] sm:h-[260px] md:w-[220px] md:h-[280px] lg:w-[280px] lg:h-[380px] xl:w-[450px] xl:h-[580px] bg-transparent rounded flex items-center justify-center relative overflow-hidden">
                   <img 
                     src="/gigs.png" 
                     alt="Gigs Artwork" 
-                    className="w-full h-full object-cover rounded"
+                    className="w-full h-[530px] object-cover rounded"
                   />
                 
             </div>
